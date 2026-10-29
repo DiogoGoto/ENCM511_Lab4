@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="C:\Projects\ENCM511\Lab4.X\out\Lab4\production\default-production.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>16384</length>
+      <used>40</used>
+      <free>16344</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>263424</length>
+      <used>7227</used>
+      <free>256197</free>
+    </memory>
+  </executable>
+</project>

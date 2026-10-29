@@ -1,0 +1,5 @@
+C:/Projects/ENCM511/Lab4.X/_build/Lab4/default.production/CMakeFiles/Lab4_default_default_XC16_compile.dir
+C:/Projects/ENCM511/Lab4.X/_build/Lab4/default.production/CMakeFiles/Lab4_default_image_zOBM8n8W.dir
+C:/Projects/ENCM511/Lab4.X/_build/Lab4/default.production/CMakeFiles/Lab4_default_Bin2Hex.dir
+C:/Projects/ENCM511/Lab4.X/_build/Lab4/default.production/CMakeFiles/edit_cache.dir
+C:/Projects/ENCM511/Lab4.X/_build/Lab4/default.production/CMakeFiles/rebuild_cache.dir

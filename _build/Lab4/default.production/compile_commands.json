@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Projects/ENCM511/Lab4.X/_build/Lab4/default.production",
+  "command": "\"c:\\Program Files\\Microchip\\xc16\\v2.10\\bin\\xc16-gcc.exe\" -DXPRJ_default=default -D__MPLAB_DEBUGGER_SNAP=1 -IC:/Projects/ENCM511/Lab4.X/cmake/Lab4/default.production/../../.. -x c -g -mcpu=24FJ256GA702 -O0 -msmart-io=1 -Wall -msfr-warn=off -mdfp=C:/Users/diogo/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.11.479/xc16 -o CMakeFiles\\Lab4_default_default_XC16_compile.dir\\C_\\Projects\\ENCM511\\Lab4.X\\2026_assignment4_main.c.o -c C:\\Projects\\ENCM511\\Lab4.X\\2026_assignment4_main.c",
+  "file": "C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c",
+  "output": "C:/Projects/ENCM511/Lab4.X/_build/Lab4/default.production/CMakeFiles/Lab4_default_default_XC16_compile.dir/C_/Projects/ENCM511/Lab4.X/2026_assignment4_main.c.o"
+},
+{
+  "directory": "C:/Projects/ENCM511/Lab4.X/_build/Lab4/default.production",
+  "command": "\"c:\\Program Files\\Microchip\\xc16\\v2.10\\bin\\xc16-gcc.exe\" -DXPRJ_default=default -D__MPLAB_DEBUGGER_SNAP=1 -IC:/Projects/ENCM511/Lab4.X/cmake/Lab4/default.production/../../.. -x c -g -mcpu=24FJ256GA702 -O0 -msmart-io=1 -Wall -msfr-warn=off -mdfp=C:/Users/diogo/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.11.479/xc16 -o CMakeFiles\\Lab4_default_default_XC16_compile.dir\\C_\\Projects\\ENCM511\\Lab4.X\\uart.c.o -c C:\\Projects\\ENCM511\\Lab4.X\\uart.c",
+  "file": "C:/Projects/ENCM511/Lab4.X/uart.c",
+  "output": "C:/Projects/ENCM511/Lab4.X/_build/Lab4/default.production/CMakeFiles/Lab4_default_default_XC16_compile.dir/C_/Projects/ENCM511/Lab4.X/uart.c.o"
+}
+]

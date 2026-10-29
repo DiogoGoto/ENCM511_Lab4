@@ -1,0 +1,11 @@
+{
+    "mplab.clangd.compileCommandsDir": "${workspaceFolder}\\_build\\Lab4\\default",
+    "cmake.sourceDirectory": "C:/Projects/ENCM511/Lab4.X/cmake/Lab4/default",
+    "memory-inspector.debugTypes": [
+        "arm-debugger",
+        "embedded-debug",
+        "gdb",
+        "gdbtarget",
+        "mplab-core-da"
+    ]
+}

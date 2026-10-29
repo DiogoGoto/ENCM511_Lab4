@@ -1,0 +1,120 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"Lab4_default_bin2hex_rule",
+			"include",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			".generated/rule.cmake",
+			".generated/main.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 67,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 83,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 89,
+				"parent" : 3
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "Lab4_default_image_cVQNujyd::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "Lab4_default_Bin2Hex::@6890427a1f51a3e7e1df",
+	"name" : "Lab4_default_Bin2Hex",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "Lab4_default_image_cVQNujyd::@6890427a1f51a3e7e1df"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"backtraces" : 
+			[
+				4
+			],
+			"isGenerated" : true,
+			"path" : "C:/Projects/ENCM511/Lab4.X/_build/Lab4/default/CMakeFiles/Lab4_default_Bin2Hex",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"backtraces" : 
+			[
+				0
+			],
+			"isGenerated" : true,
+			"path" : "C:/Projects/ENCM511/Lab4.X/_build/Lab4/default/CMakeFiles/Lab4_default_Bin2Hex.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

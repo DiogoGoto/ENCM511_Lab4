@@ -1,0 +1,195 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "C:/Projects/ENCM511/Lab4.X/out/Lab4/default.elf"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"include",
+			"target_link_options",
+			"Lab4_default_link_rule",
+			"target_compile_definitions"
+		],
+		"files" : 
+		[
+			".generated/main.cmake",
+			"CMakeLists.txt",
+			".generated/rule.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 64,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 76,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 77,
+				"parent" : 4
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "Lab4_default_default_XC16_compile::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "Lab4_default_image_cVQNujyd::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"backtrace" : 5,
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mcpu=24FJ256GA702",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mreserve=data@0x800:0x81b",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mreserve=data@0x81c:0x81d",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mreserve=data@0x81e:0x81f",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mreserve=data@0x820:0x821",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mreserve=data@0x822:0x823",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mreserve=data@0x824:0x827",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mreserve=data@0x82a:0x84f",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-Wl,--script=p24FJ256GA702.gld,--local-stack,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D__DEBUG=__DEBUG,--defsym=__MPLAB_DEBUGGER_SNAP=1,--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--library-path=C:/Projects/ENCM511/Lab4.X/cmake/Lab4/default/../../..,--no-force-link,--smart-io,--report-mem,--memorysummary,memoryfile.xml",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-mdfp=C:/Users/diogo/.mchp_packs/Microchip/PIC24F-GA-GB_DFP/1.11.479/xc16",
+				"role" : "flags"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "Lab4_default_image_cVQNujyd",
+	"nameOnDisk" : "default.elf",
+	"objectDependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "Lab4_default_default_XC16_compile::@6890427a1f51a3e7e1df"
+		}
+	],
+	"orderDependencies" : 
+	[
+		{
+			"id" : "Lab4_default_default_XC16_compile::@6890427a1f51a3e7e1df"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"backtraces" : 
+			[
+				3
+			],
+			"isGenerated" : true,
+			"path" : "C:/Projects/ENCM511/Lab4.X/_build/Lab4/default/CMakeFiles/Lab4_default_default_XC16_compile.dir/C_/Projects/ENCM511/Lab4.X/2026_assignment4_main.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"backtraces" : 
+			[
+				3
+			],
+			"isGenerated" : true,
+			"path" : "C:/Projects/ENCM511/Lab4.X/_build/Lab4/default/CMakeFiles/Lab4_default_default_XC16_compile.dir/C_/Projects/ENCM511/Lab4.X/uart.c.o",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

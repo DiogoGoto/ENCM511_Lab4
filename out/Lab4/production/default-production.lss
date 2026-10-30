@@ -127,29 +127,29 @@ Idx Name          Size      VMA       LMA       File off  Algn  Flags
 121 .ivt._U2ErrInterrupt 00000002  00000098  00000098  00000204  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
 122 .reset        00000004  00000000  00000000  000000d4  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
 123 .text         00000f26  00000100  00000100  000002d4  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
-124 .debug_info   000036f2  00000000  00000000  000028c4  2**0  CONTENTS, DEBUGGING, ABSOLUTE
-125 .debug_abbrev 000003b5  00000000  00000000  000096a8  2**0  CONTENTS, DEBUGGING, ABSOLUTE
-126 .debug_line   0000040b  00000000  00000000  00009e12  2**0  CONTENTS, DEBUGGING, ABSOLUTE
-127 .debug_frame  00000242  00000000  00000000  0000a628  2**0  CONTENTS, DEBUGGING, ABSOLUTE
-128 .debug_str    00000196  00000000  00000000  0000aaac  2**0  CONTENTS, DEBUGGING, ABSOLUTE
-129 .debug_pubnames 0000019d  00000000  00000000  0000add8  2**0  CONTENTS, DEBUGGING, ABSOLUTE
-130 .debug_aranges 00000090  00000000  00000000  0000b112  2**0  CONTENTS, DEBUGGING, ABSOLUTE
-131 .debug_pubtypes 00000430  00000090  00000090  0000b232  2**0  CONTENTS, DEBUGGING, ABSOLUTE
-132 __c30_signature 000000a8  000004c0  000004c0  0000ba92  2**0  CONTENTS, DEBUGGING, ABSOLUTE
+124 .debug_info   000036f2  00000000  00000000  000028c8  2**0  CONTENTS, DEBUGGING, ABSOLUTE
+125 .debug_abbrev 000003b5  00000000  00000000  000096ac  2**0  CONTENTS, DEBUGGING, ABSOLUTE
+126 .debug_line   0000040b  00000000  00000000  00009e16  2**0  CONTENTS, DEBUGGING, ABSOLUTE
+127 .debug_frame  00000242  00000000  00000000  0000a62c  2**0  CONTENTS, DEBUGGING, ABSOLUTE
+128 .debug_str    00000196  00000000  00000000  0000aab0  2**0  CONTENTS, DEBUGGING, ABSOLUTE
+129 .debug_pubnames 0000019d  00000000  00000000  0000addc  2**0  CONTENTS, DEBUGGING, ABSOLUTE
+130 .debug_aranges 00000090  00000000  00000000  0000b116  2**0  CONTENTS, DEBUGGING, ABSOLUTE
+131 .debug_pubtypes 00000430  00000090  00000090  0000b236  2**0  CONTENTS, DEBUGGING, ABSOLUTE
+132 __c30_signature 000000a8  000004c0  000004c0  0000ba96  2**0  CONTENTS, DEBUGGING, ABSOLUTE
 133 .nbss         00000008  00000800  00000800  00002120  2**1  ALLOC, NEAR
 134 .data         0000001e  00000808  00000808  00002120  2**1  CONTENTS, ALLOC, DATA, NEVER_LOAD
 135 .bss          00000002  00000826  00000826  0000215c  2**1  ALLOC
-136 .config_JTAGEN 00000002  0002af28  0002af28  000028c0  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
-137 .config_WDTCLK 00000002  0002af20  0002af20  000028bc  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
-138 .config_FCKSM 00000002  0002af1c  0002af1c  000028b8  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
-139 .config_IESO  00000002  0002af18  0002af18  000028b4  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
+136 .config_JTAGEN 00000002  0002af28  0002af28  000028c4  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
+137 .config_WDTCLK 00000002  0002af20  0002af20  000028c0  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
+138 .config_FCKSM 00000002  0002af1c  0002af1c  000028bc  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
+139 .config_IESO  00000002  0002af18  0002af18  000028b8  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
 140 .ivt._IOCInterrupt 00000002  0000003a  0000003a  00000148  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
 141 .ivt._T2Interrupt 00000002  00000022  00000022  00000118  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
 142 .ivt._U2RXInterrupt 00000002  00000050  00000050  00000174  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
 143 .ivt._U2TXInterrupt 00000002  00000052  00000052  00000178  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
 144 .const        00000044  00009026  00001026  0000215c  2**1  CONTENTS, ALLOC, LOAD, READONLY, PSV, ABSOLUTE, PAGE
-145 .text         0000033a  0000106a  0000106a  000021e4  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
-146 .dinit        0000002e  000013a4  000013a4  00002858  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
+145 .text         0000033c  0000106a  0000106a  000021e4  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
+146 .dinit        0000002e  000013a6  000013a6  0000285c  2**1  CONTENTS, ALLOC, LOAD, CODE, ABSOLUTE
 Disassembly of section .ivt._ADC1Interrupt:
 
 0000002e <.ivt._ADC1Interrupt>:
@@ -663,9 +663,9 @@ CORCON_RESET():
      114:	d0 00 07    	rcall     0x2b6 <__crt_start_mode> <__crt_start_mode_normal>
      116:	00 00 e0    	cp0.w     w0
      118:	03 00 3a    	bra       NZ, 0x120 <L11>
-     11a:	40 3a 21    	mov.w     #0x13a4, w0
+     11a:	60 3a 21    	mov.w     #0x13a6, w0
      11c:	01 00 20    	mov.w     #0x0, w1
-     11e:	02 00 37    	bra       0x124 <L21> <.LASF16>
+     11e:	02 00 37    	bra       0x124 <L21>
 
 00000120 <L11>:
 L11():
@@ -688,7 +688,7 @@ L12():
 
 00000134 <L13>:
 L13():
-     134:	de 11 02 00 00 00 00 	call      0x11de <_main>
+     134:	e0 11 02 00 00 00 00 	call      0x11e0 <_main>
      137:	
      138:	00 40 da    	break     
      13a:	00 00 fe    	reset     
@@ -857,7 +857,7 @@ __IOCInterrupt():
      20e:	00 00 e0    	cp0.w     w0
      210:	15 00 32    	bra       Z, 0x23c <.L13>
      212:	84 e6 a9    	bclr.b    0x684, #0x7
-     214:	80 e6 a9    	bclr.b    0x680, #0x7
+     214:	60 26 a9    	bclr.b    0x660, #0x1
      216:	8a 60 a9    	bclr.b    0x8a, #0x3
      218:	c1 33 80    	mov.w     0x678, w1
      21a:	00 10 20    	mov.w     #0x100, w0
@@ -3566,21 +3566,22 @@ C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:120
     10a0:	8a 60 a9    	bclr.b    0x8a, #0x3
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:122
 
-    IPC4bits.IOCIP     = 2;     // IOC priority  
+    IPC4bits.IOCIP     = 3;     // IOC priority  
     10a2:	81 05 80    	mov.w     0xb0, w1
     10a4:	f0 ff 28    	mov.w     #0x8fff, w0
-    10a6:	00 80 60    	and.w     w1, w0, w0
-    10a8:	00 d0 a0    	bset.w    w0, #0xd
-    10aa:	80 05 88    	mov.w     w0, 0xb0
+    10a6:	80 80 60    	and.w     w1, w0, w1
+    10a8:	00 00 23    	mov.w     #0x3000, w0
+    10aa:	01 00 70    	ior.w     w0, w1, w0
+    10ac:	80 05 88    	mov.w     w0, 0xb0
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:123
     IEC1bits.IOCIE     = 1;     // IOC interrupt enable 
-    10ac:	9a 60 a8    	bset.b    0x9a, #0x3
+    10ae:	9a 60 a8    	bset.b    0x9a, #0x3
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:124
 }
-    10ae:	00 80 fa    	ulnk      
-    10b0:	00 00 06    	return    
+    10b0:	00 80 fa    	ulnk      
+    10b2:	00 00 06    	return    
 
-000010b2 <_timer_init>:
+000010b4 <_timer_init>:
 timer_init():
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:131
 
@@ -3590,80 +3591,80 @@ C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:131
  * Datasheet ref: Section 13, Register 13-1 (T2CON).
  * MUST be called last in main() -- see main() comment. */
 void timer_init(void) {
-    10b2:	00 00 fa    	lnk       #0x0
+    10b4:	00 00 fa    	lnk       #0x0
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:132
     T2CON = 0;                  // DO NOT CHANGE 
-    10b4:	a0 21 ef    	clr.w     0x1a0
+    10b6:	a0 21 ef    	clr.w     0x1a0
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:133
     TMR2  = 0;                  // DO NOT CHANGE 
-    10b6:	96 21 ef    	clr.w     0x196
+    10b8:	96 21 ef    	clr.w     0x196
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:135
 
     PR2               = 625;    // period register - counts = FCY / (prescaler * f_desired) = 4 MHz / (64 * 100 Hz) = 625
-    10b8:	10 27 20    	mov.w     #0x271, w0
-    10ba:	e0 0c 88    	mov.w     w0, 0x19c
+    10ba:	10 27 20    	mov.w     #0x271, w0
+    10bc:	e0 0c 88    	mov.w     w0, 0x19c
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:136
     T2CONbits.TCKPS   = 2;      // prescaler select - 1:64
-    10bc:	01 0d 80    	mov.w     0x1a0, w1
-    10be:	f0 fc 2f    	mov.w     #0xffcf, w0
-    10c0:	00 80 60    	and.w     w1, w0, w0
-    10c2:	00 50 a0    	bset.w    w0, #0x5
-    10c4:	00 0d 88    	mov.w     w0, 0x1a0
+    10be:	01 0d 80    	mov.w     0x1a0, w1
+    10c0:	f0 fc 2f    	mov.w     #0xffcf, w0
+    10c2:	00 80 60    	and.w     w1, w0, w0
+    10c4:	00 50 a0    	bset.w    w0, #0x5
+    10c6:	00 0d 88    	mov.w     w0, 0x1a0
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:137
     T2CONbits.TCS     = 0;      // clock source     - FOSC/2
-    10c6:	a0 21 a9    	bclr.b    0x1a0, #0x1
+    10c8:	a0 21 a9    	bclr.b    0x1a0, #0x1
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:138
     T2CONbits.T32     = 0;      // timer width - 16 bits
-    10c8:	a0 61 a9    	bclr.b    0x1a0, #0x3
+    10ca:	a0 61 a9    	bclr.b    0x1a0, #0x3
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:140
 
     IFS0bits.T2IF     = 0;      // Clear interrupt flag
-    10ca:	88 e0 a9    	bclr.b    0x88, #0x7
+    10cc:	88 e0 a9    	bclr.b    0x88, #0x7
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:141
     IPC1bits.T2IP     = 2;      // Timer2 priority    
-    10cc:	51 05 80    	mov.w     0xaa, w1
-    10ce:	f0 ff 28    	mov.w     #0x8fff, w0
-    10d0:	00 80 60    	and.w     w1, w0, w0
-    10d2:	00 d0 a0    	bset.w    w0, #0xd
-    10d4:	50 05 88    	mov.w     w0, 0xaa
+    10ce:	51 05 80    	mov.w     0xaa, w1
+    10d0:	f0 ff 28    	mov.w     #0x8fff, w0
+    10d2:	00 80 60    	and.w     w1, w0, w0
+    10d4:	00 d0 a0    	bset.w    w0, #0xd
+    10d6:	50 05 88    	mov.w     w0, 0xaa
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:142
     IEC0bits.T2IE     = 1;      // interrupt enable   
-    10d6:	98 e0 a8    	bset.b    0x98, #0x7
+    10d8:	98 e0 a8    	bset.b    0x98, #0x7
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:143
     T2CONbits.TON     = 1;      // start timer        
-    10d8:	a1 e1 a8    	bset.b    0x1a1, #0x7
+    10da:	a1 e1 a8    	bset.b    0x1a1, #0x7
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:146
 
 
     T3CON = 0;                  // DO NOT CHANGE 
-    10da:	a2 21 ef    	clr.w     0x1a2
+    10dc:	a2 21 ef    	clr.w     0x1a2
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:147
     TMR3  = 0;                  // DO NOT CHANGE 
-    10dc:	9a 21 ef    	clr.w     0x19a
+    10de:	9a 21 ef    	clr.w     0x19a
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:149
 
     PR3               = 625;    // period register - counts = FCY / (prescaler * f_desired) = 4 MHz / (64 * 100 Hz) = 625
-    10de:	10 27 20    	mov.w     #0x271, w0
-    10e0:	f0 0c 88    	mov.w     w0, 0x19e
+    10e0:	10 27 20    	mov.w     #0x271, w0
+    10e2:	f0 0c 88    	mov.w     w0, 0x19e
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:150
     T3CONbits.TCKPS   = 0;      // prescaler select - 1:64
-    10e2:	11 0d 80    	mov.w     0x1a2, w1
-    10e4:	f0 fc 2f    	mov.w     #0xffcf, w0
-    10e6:	00 80 60    	and.w     w1, w0, w0
-    10e8:	10 0d 88    	mov.w     w0, 0x1a2
+    10e4:	11 0d 80    	mov.w     0x1a2, w1
+    10e6:	f0 fc 2f    	mov.w     #0xffcf, w0
+    10e8:	00 80 60    	and.w     w1, w0, w0
+    10ea:	10 0d 88    	mov.w     w0, 0x1a2
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:151
     T3CONbits.TCS     = 0;      // clock source     - FOSC/2
-    10ea:	a2 21 a9    	bclr.b    0x1a2, #0x1
+    10ec:	a2 21 a9    	bclr.b    0x1a2, #0x1
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:153
 
     T3CONbits.TON     = 1;      // start timer   
-    10ec:	a3 e1 a8    	bset.b    0x1a3, #0x7
+    10ee:	a3 e1 a8    	bset.b    0x1a3, #0x7
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:154
 }
-    10ee:	00 80 fa    	ulnk      
-    10f0:	00 00 06    	return    
+    10f0:	00 80 fa    	ulnk      
+    10f2:	00 00 06    	return    
 
-000010f2 <_pwm_init>:
+000010f4 <_pwm_init>:
 pwm_init():
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:164
 
@@ -3676,63 +3677,63 @@ C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:164
  *   - Set the OCM bits to enable edge-aligned PWM mode.
  * Datasheet ref: Sections 11.5 (PPS) and 15.3 (Output Compare). */
 void pwm_init(void) {
-    10f2:	00 00 fa    	lnk       #0x0
+    10f4:	00 00 fa    	lnk       #0x0
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:166
     // your code here 
     RPOR6bits.RP13R = 13; // RP13 - RB13 set as PWM output (OC1)
-    10f4:	01 3f 80    	mov.w     0x7e0, w1
-    10f6:	f0 0f 28    	mov.w     #0x80ff, w0
-    10f8:	80 80 60    	and.w     w1, w0, w1
-    10fa:	00 d0 20    	mov.w     #0xd00, w0
-    10fc:	01 00 70    	ior.w     w0, w1, w0
-    10fe:	00 3f 88    	mov.w     w0, 0x7e0
+    10f6:	01 3f 80    	mov.w     0x7e0, w1
+    10f8:	f0 0f 28    	mov.w     #0x80ff, w0
+    10fa:	80 80 60    	and.w     w1, w0, w1
+    10fc:	00 d0 20    	mov.w     #0xd00, w0
+    10fe:	01 00 70    	ior.w     w0, w1, w0
+    1100:	00 3f 88    	mov.w     w0, 0x7e0
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:167
     RPOR3bits.RP6R = 13; // RP6 - RB6 set as PWM output (OC1)
-    1100:	d1 3e 80    	mov.w     0x7da, w1
-    1102:	00 f8 2f    	mov.w     #0xff80, w0
-    1104:	00 80 60    	and.w     w1, w0, w0
-    1106:	d0 00 b3    	ior.w     #0xd, w0
-    1108:	d0 3e 88    	mov.w     w0, 0x7da
+    1102:	d1 3e 80    	mov.w     0x7da, w1
+    1104:	00 f8 2f    	mov.w     #0xff80, w0
+    1106:	00 80 60    	and.w     w1, w0, w0
+    1108:	d0 00 b3    	ior.w     #0xd, w0
+    110a:	d0 3e 88    	mov.w     w0, 0x7da
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:168
     OC1RS = PWM_PERIOD(PWM_FREQ); // Set the period for 1 kHz PWM frequency
-    110a:	00 19 20    	mov.w     #0x190, w0
-    110c:	a0 11 88    	mov.w     w0, 0x234
+    110c:	00 19 20    	mov.w     #0x190, w0
+    110e:	a0 11 88    	mov.w     w0, 0x234
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:169
     OC1R = PWM_DUTY_CYCLE(PWM_DUTY);//PWM_PERIOD(PWM_FREQ);
-    110e:	80 0c 20    	mov.w     #0xc8, w0
-    1110:	b0 11 88    	mov.w     w0, 0x236
+    1110:	80 0c 20    	mov.w     #0xc8, w0
+    1112:	b0 11 88    	mov.w     w0, 0x236
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:171
     
     OC1CON2bits.SYNCSEL = 0x1F;
-    1112:	90 11 80    	mov.w     0x232, w0
-    1114:	f0 01 b3    	ior.w     #0x1f, w0
-    1116:	90 11 88    	mov.w     w0, 0x232
+    1114:	90 11 80    	mov.w     0x232, w0
+    1116:	f0 01 b3    	ior.w     #0x1f, w0
+    1118:	90 11 88    	mov.w     w0, 0x232
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:172
     OC1CON2bits.OCTRIG = 0;
-    1118:	32 e2 a9    	bclr.b    0x232, #0x7
+    111a:	32 e2 a9    	bclr.b    0x232, #0x7
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:173
     OC1CON1bits.OCTSEL = 1; // Time 3 Clock Source
-    111a:	81 11 80    	mov.w     0x230, w1
-    111c:	f0 3f 2e    	mov.w     #0xe3ff, w0
-    111e:	00 80 60    	and.w     w1, w0, w0
-    1120:	00 a0 a0    	bset.w    w0, #0xa
-    1122:	80 11 88    	mov.w     w0, 0x230
+    111c:	81 11 80    	mov.w     0x230, w1
+    111e:	f0 3f 2e    	mov.w     #0xe3ff, w0
+    1120:	00 80 60    	and.w     w1, w0, w0
+    1122:	00 a0 a0    	bset.w    w0, #0xa
+    1124:	80 11 88    	mov.w     w0, 0x230
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:175
 
     OC1CON1bits.OCM = 0b110; // Init pin low and compare drive it high
-    1124:	81 11 80    	mov.w     0x230, w1
-    1126:	80 ff 2f    	mov.w     #0xfff8, w0
-    1128:	00 80 60    	and.w     w1, w0, w0
-    112a:	60 00 b3    	ior.w     #0x6, w0
-    112c:	80 11 88    	mov.w     w0, 0x230
+    1126:	81 11 80    	mov.w     0x230, w1
+    1128:	80 ff 2f    	mov.w     #0xfff8, w0
+    112a:	00 80 60    	and.w     w1, w0, w0
+    112c:	60 00 b3    	ior.w     #0x6, w0
+    112e:	80 11 88    	mov.w     w0, 0x230
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:178
     
     
 }
-    112e:	00 80 fa    	ulnk      
-    1130:	00 00 06    	return    
+    1130:	00 80 fa    	ulnk      
+    1132:	00 00 06    	return    
 
-00001132 <_set_motor_pwm>:
+00001134 <_set_motor_pwm>:
 set_motor_pwm():
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:187
 
@@ -3744,9 +3745,9 @@ C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:187
  * Clear both direction pins before setting the new direction.
  * The duty cycle written to OC1R must be non-negative and clamped to PWM_MAX. */
 void set_motor_pwm(int32_t control) {
-    1132:	08 00 fa    	lnk       #0x8
-    1134:	20 07 98    	mov.w     w0, [w14+4]
-    1136:	31 07 98    	mov.w     w1, [w14+6]
+    1134:	08 00 fa    	lnk       #0x8
+    1136:	20 07 98    	mov.w     w0, [w14+4]
+    1138:	31 07 98    	mov.w     w1, [w14+6]
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:193
     int32_t magnitude;
     // Clearing Directions Pins
@@ -3754,92 +3755,92 @@ C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:193
     // IN4 = 0;
 
     if (control > 0) { // Forward
-    1138:	2e 00 90    	mov.w     [w14+4], w0
-    113a:	be 00 90    	mov.w     [w14+6], w1
-    113c:	e0 0f 50    	sub.w     w0, #0x0, [w15]
-    113e:	e0 8f 58    	subb.w    w1, #0x0, [w15]
-    1140:	03 00 34    	bra       LE, 0x1148 <.L7>
+    113a:	2e 00 90    	mov.w     [w14+4], w0
+    113c:	be 00 90    	mov.w     [w14+6], w1
+    113e:	e0 0f 50    	sub.w     w0, #0x0, [w15]
+    1140:	e0 8f 58    	subb.w    w1, #0x0, [w15]
+    1142:	03 00 34    	bra       LE, 0x114a <.L7>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:194
         IN3 = 1;
-    1142:	7b 46 a8    	bset.b    0x67b, #0x2
+    1144:	7b 46 a8    	bset.b    0x67b, #0x2
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:195
         IN4 = 0;
-    1144:	7b 66 a9    	bclr.b    0x67b, #0x3
-    1146:	0a 00 37    	bra       0x115c <.L8>
+    1146:	7b 66 a9    	bclr.b    0x67b, #0x3
+    1148:	0a 00 37    	bra       0x115e <.L8>
 
-00001148 <.L7>:
+0000114a <.L7>:
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:197
     } 
     else if (control < 0) { // Backward
-    1148:	2e 00 90    	mov.w     [w14+4], w0
-    114a:	be 00 90    	mov.w     [w14+6], w1
-    114c:	e0 0f 50    	sub.w     w0, #0x0, [w15]
-    114e:	e0 8f 58    	subb.w    w1, #0x0, [w15]
-    1150:	03 00 3d    	bra       GE, 0x1158 <.L9>
+    114a:	2e 00 90    	mov.w     [w14+4], w0
+    114c:	be 00 90    	mov.w     [w14+6], w1
+    114e:	e0 0f 50    	sub.w     w0, #0x0, [w15]
+    1150:	e0 8f 58    	subb.w    w1, #0x0, [w15]
+    1152:	03 00 3d    	bra       GE, 0x115a <.L9>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:198
         IN3 = 0;
-    1152:	7b 46 a9    	bclr.b    0x67b, #0x2
+    1154:	7b 46 a9    	bclr.b    0x67b, #0x2
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:199
         IN4 = 1;
-    1154:	7b 66 a8    	bset.b    0x67b, #0x3
-    1156:	02 00 37    	bra       0x115c <.L8>
+    1156:	7b 66 a8    	bset.b    0x67b, #0x3
+    1158:	02 00 37    	bra       0x115e <.L8>
 
-00001158 <.L9>:
+0000115a <.L9>:
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:202
     } 
     else {
         IN3 = 0;
-    1158:	7b 46 a9    	bclr.b    0x67b, #0x2
+    115a:	7b 46 a9    	bclr.b    0x67b, #0x2
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:203
         IN4 = 0;
-    115a:	7b 66 a9    	bclr.b    0x67b, #0x3
+    115c:	7b 66 a9    	bclr.b    0x67b, #0x3
 
-0000115c <.L8>:
+0000115e <.L8>:
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:205
     }
     magnitude = abs(control);
-    115c:	2e 00 90    	mov.w     [w14+4], w0
-    115e:	be 00 90    	mov.w     [w14+6], w1
-    1160:	6b 00 07    	rcall     0x1238 <_abs> <.LFB11> <.LFE10>
-    1162:	00 8f be    	mov.d     w0, [w14]
+    115e:	2e 00 90    	mov.w     [w14+4], w0
+    1160:	be 00 90    	mov.w     [w14+6], w1
+    1162:	6b 00 07    	rcall     0x123a <_abs> <.LFB11> <.LFE10>
+    1164:	00 8f be    	mov.d     w0, [w14]
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:206
     if (magnitude > 0) {
-    1164:	1e 00 be    	mov.d     [w14], w0
-    1166:	e0 0f 50    	sub.w     w0, #0x0, [w15]
-    1168:	e0 8f 58    	subb.w    w1, #0x0, [w15]
-    116a:	03 00 34    	bra       LE, 0x1172 <.L10>
+    1166:	1e 00 be    	mov.d     [w14], w0
+    1168:	e0 0f 50    	sub.w     w0, #0x0, [w15]
+    116a:	e0 8f 58    	subb.w    w1, #0x0, [w15]
+    116c:	03 00 34    	bra       LE, 0x1174 <.L10>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:207
         magnitude = PWM_MAX;
-    116c:	f0 18 20    	mov.w     #0x18f, w0
-    116e:	01 00 20    	mov.w     #0x0, w1
-    1170:	00 8f be    	mov.d     w0, [w14]
+    116e:	f0 18 20    	mov.w     #0x18f, w0
+    1170:	01 00 20    	mov.w     #0x0, w1
+    1172:	00 8f be    	mov.d     w0, [w14]
 
-00001172 <.L10>:
+00001174 <.L10>:
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:209
     }
     if (magnitude < 0) {
-    1172:	1e 00 be    	mov.d     [w14], w0
-    1174:	e0 0f 50    	sub.w     w0, #0x0, [w15]
-    1176:	e0 8f 58    	subb.w    w1, #0x0, [w15]
-    1178:	03 00 3d    	bra       GE, 0x1180 <.L11>
+    1174:	1e 00 be    	mov.d     [w14], w0
+    1176:	e0 0f 50    	sub.w     w0, #0x0, [w15]
+    1178:	e0 8f 58    	subb.w    w1, #0x0, [w15]
+    117a:	03 00 3d    	bra       GE, 0x1182 <.L11>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:210
         magnitude = PWM_MIN;
-    117a:	a0 00 20    	mov.w     #0xa, w0
-    117c:	01 00 20    	mov.w     #0x0, w1
-    117e:	00 8f be    	mov.d     w0, [w14]
+    117c:	a0 00 20    	mov.w     #0xa, w0
+    117e:	01 00 20    	mov.w     #0x0, w1
+    1180:	00 8f be    	mov.d     w0, [w14]
 
-00001180 <.L11>:
+00001182 <.L11>:
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:212
     }
     OC1R = magnitude;
-    1180:	1e 00 78    	mov.w     [w14], w0
-    1182:	b0 11 88    	mov.w     w0, 0x236
+    1182:	1e 00 78    	mov.w     [w14], w0
+    1184:	b0 11 88    	mov.w     w0, 0x236
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:213
 }
-    1184:	00 80 fa    	ulnk      
-    1186:	00 00 06    	return    
+    1186:	00 80 fa    	ulnk      
+    1188:	00 00 06    	return    
 
-00001188 <_run_controller>:
+0000118a <_run_controller>:
 run_controller():
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:226
 
@@ -3855,73 +3856,73 @@ C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:226
  *   Clearing IEC1bits.IOCIE instead risks silently dropping an encoder
  *   edge -- a position error the controller can never recover from. */
 void run_controller(void) {
-    1188:	0c 00 fa    	lnk       #0xc
+    118a:	0c 00 fa    	lnk       #0xc
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:231
     int32_t position;
     int32_t error;
     int32_t u;
 
     __builtin_disi(0x3FFF);         // DO NOT CHANGE 
-    118a:	ff 3f fc    	disi      #0x3fff
+    118c:	ff 3f fc    	disi      #0x3fff
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:232
     position = encoder_count;       // DO NOT CHANGE
-    118c:	02 40 80    	mov.w     0x800, w2
-    118e:	13 40 80    	mov.w     0x802, w3
-    1190:	02 8f be    	mov.d     w2, [w14]
+    118e:	02 40 80    	mov.w     0x800, w2
+    1190:	13 40 80    	mov.w     0x802, w3
+    1192:	02 8f be    	mov.d     w2, [w14]
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:233
     __builtin_disi(0x0000);         // DO NOT CHANGE
-    1192:	00 00 fc    	disi      #0x0
+    1194:	00 00 fc    	disi      #0x0
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:236
 
     // write your control algorithm here
     error = REFERENCE - position;
-    1194:	00 10 20    	mov.w     #0x100, w0
-    1196:	01 00 20    	mov.w     #0x0, w1
-    1198:	3e 01 50    	sub.w     w0, [w14++], w2
-    119a:	ae 81 58    	subb.w    w1, [w14--], w3
-    119c:	02 00 be    	mov.d     w2, w0
-    119e:	20 07 98    	mov.w     w0, [w14+4]
-    11a0:	31 07 98    	mov.w     w1, [w14+6]
+    1196:	00 10 20    	mov.w     #0x100, w0
+    1198:	01 00 20    	mov.w     #0x0, w1
+    119a:	3e 01 50    	sub.w     w0, [w14++], w2
+    119c:	ae 81 58    	subb.w    w1, [w14--], w3
+    119e:	02 00 be    	mov.d     w2, w0
+    11a0:	20 07 98    	mov.w     w0, [w14+4]
+    11a2:	31 07 98    	mov.w     w1, [w14+6]
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:237
     u = (KP_Q8 * error) >> 8;
-    11a2:	be 00 90    	mov.w     [w14+6], w1
-    11a4:	40 9c 20    	mov.w     #0x9c4, w0
-    11a6:	00 88 b9    	mul.ss    w1, w0, w0
-    11a8:	00 01 78    	mov.w     w0, w2
-    11aa:	2e 00 90    	mov.w     [w14+4], w0
-    11ac:	60 00 b9    	mul.su    w0, #0x0, w0
-    11ae:	00 00 78    	mov.w     w0, w0
-    11b0:	00 01 41    	add.w     w2, w0, w2
-    11b2:	ae 00 90    	mov.w     [w14+4], w1
-    11b4:	40 9c 20    	mov.w     #0x9c4, w0
-    11b6:	00 08 b8    	mul.uu    w1, w0, w0
-    11b8:	01 01 41    	add.w     w2, w1, w2
-    11ba:	82 00 78    	mov.w     w2, w1
-    11bc:	c8 09 dd    	sl.w      w1, #0x8, w3
-    11be:	48 02 de    	lsr.w     w0, #0x8, w4
-    11c0:	04 82 71    	ior.w     w3, w4, w4
-    11c2:	c8 8a de    	asr.w     w1, #0x8, w5
-    11c4:	44 07 98    	mov.w     w4, [w14+8]
-    11c6:	55 07 98    	mov.w     w5, [w14+10]
+    11a4:	be 00 90    	mov.w     [w14+6], w1
+    11a6:	40 9c 20    	mov.w     #0x9c4, w0
+    11a8:	00 88 b9    	mul.ss    w1, w0, w0
+    11aa:	00 01 78    	mov.w     w0, w2
+    11ac:	2e 00 90    	mov.w     [w14+4], w0
+    11ae:	60 00 b9    	mul.su    w0, #0x0, w0
+    11b0:	00 00 78    	mov.w     w0, w0
+    11b2:	00 01 41    	add.w     w2, w0, w2
+    11b4:	ae 00 90    	mov.w     [w14+4], w1
+    11b6:	40 9c 20    	mov.w     #0x9c4, w0
+    11b8:	00 08 b8    	mul.uu    w1, w0, w0
+    11ba:	01 01 41    	add.w     w2, w1, w2
+    11bc:	82 00 78    	mov.w     w2, w1
+    11be:	c8 09 dd    	sl.w      w1, #0x8, w3
+    11c0:	48 02 de    	lsr.w     w0, #0x8, w4
+    11c2:	04 82 71    	ior.w     w3, w4, w4
+    11c4:	c8 8a de    	asr.w     w1, #0x8, w5
+    11c6:	44 07 98    	mov.w     w4, [w14+8]
+    11c8:	55 07 98    	mov.w     w5, [w14+10]
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:238
     set_motor_pwm(u);
-    11c8:	4e 00 90    	mov.w     [w14+8], w0
-    11ca:	de 00 90    	mov.w     [w14+10], w1
-    11cc:	b2 ff 07    	rcall     0x1132 <_set_motor_pwm> <.LFB5> <.LFE4>
+    11ca:	4e 00 90    	mov.w     [w14+8], w0
+    11cc:	de 00 90    	mov.w     [w14+10], w1
+    11ce:	b2 ff 07    	rcall     0x1134 <_set_motor_pwm> <.LFB5> <.LFE4>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:239
     send_controller_data(REFERENCE, position, u);
-    11ce:	4e 02 90    	mov.w     [w14+8], w4
-    11d0:	de 02 90    	mov.w     [w14+10], w5
-    11d2:	1e 01 be    	mov.d     [w14], w2
-    11d4:	00 10 20    	mov.w     #0x100, w0
-    11d6:	01 00 20    	mov.w     #0x0, w1
-    11d8:	16 00 07    	rcall     0x1206 <_send_controller_data> <.LFB10> <.LFE9>
+    11d0:	4e 02 90    	mov.w     [w14+8], w4
+    11d2:	de 02 90    	mov.w     [w14+10], w5
+    11d4:	1e 01 be    	mov.d     [w14], w2
+    11d6:	00 10 20    	mov.w     #0x100, w0
+    11d8:	01 00 20    	mov.w     #0x0, w1
+    11da:	16 00 07    	rcall     0x1208 <_send_controller_data> <.LFB10> <.LFE9>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:240
 }
-    11da:	00 80 fa    	ulnk      
-    11dc:	00 00 06    	return    
+    11dc:	00 80 fa    	ulnk      
+    11de:	00 00 06    	return    
 
-000011de <_main>:
+000011e0 <_main>:
 main():
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:298
 
@@ -3934,9 +3935,9 @@ C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:298
  * No function calls, UART, or delays inside this ISR. */
 void __attribute__((interrupt, no_auto_psv)) _IOCInterrupt(void) {
     if (IOCFBbits.IOCFB7) {
-        IOCFBbits.IOCFB7 = 0; // Clear the interrupt flag
-        IOCPBbits.IOCPB7 = 0; // Clear the interrupt flag
-        IFS1bits.IOCIF = 0; // Clear the interrupt flag
+        IOCFBbits.IOCFB7 = 0;       // Clear RB7 flag
+        IOCSTATbits.IOCPBF = 0;     // Clear positive-edge flag
+        IFS1bits.IOCIF = 0;  
 
         if (CHB) {
             encoder_count++;
@@ -3982,63 +3983,63 @@ void __attribute__((interrupt, no_auto_psv)) _T2Interrupt(void) {
  * timer_init() must be last: starting Timer2 before other peripherals are
  * configured means _T2Interrupt can fire before PWM and the encoder are ready. */
 int main(void) {
-    11de:	32 00 fa    	lnk       #0x32
+    11e0:	32 00 fa    	lnk       #0x32
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:299
     IFS0 = 0; IFS1 = 0; IFS2 = 0; IFS3 = 0; IFS4 = 0;
-    11e0:	88 20 ef    	clr.w     0x88
-    11e2:	8a 20 ef    	clr.w     0x8a
-    11e4:	8c 20 ef    	clr.w     0x8c
-    11e6:	8e 20 ef    	clr.w     0x8e
-    11e8:	90 20 ef    	clr.w     0x90
+    11e2:	88 20 ef    	clr.w     0x88
+    11e4:	8a 20 ef    	clr.w     0x8a
+    11e6:	8c 20 ef    	clr.w     0x8c
+    11e8:	8e 20 ef    	clr.w     0x8e
+    11ea:	90 20 ef    	clr.w     0x90
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:300
     clock_init();
-    11ea:	3f ff 07    	rcall     0x106a <_clock_init> <.L0> <.LFB0> <.Ltext0>
+    11ec:	3e ff 07    	rcall     0x106a <_clock_init> <.L0> <.LFB0> <.Ltext0>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:301
     gpio_init();
-    11ec:	45 ff 07    	rcall     0x1078 <_gpio_init> <.LFB1> <.LFE0>
+    11ee:	44 ff 07    	rcall     0x1078 <_gpio_init> <.LFB1> <.LFE0>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:302
     encoder_init();
-    11ee:	51 ff 07    	rcall     0x1092 <_encoder_init> <.LFB2> <.LFE1>
+    11f0:	50 ff 07    	rcall     0x1092 <_encoder_init> <.LFB2> <.LFE1>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:303
     pwm_init();
-    11f0:	80 ff 07    	rcall     0x10f2 <_pwm_init> <.LFB4> <.LFE3>
+    11f2:	80 ff 07    	rcall     0x10f4 <_pwm_init> <.LFB4> <.LFE3>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:304
     timer_init();
-    11f2:	5f ff 07    	rcall     0x10b2 <_timer_init> <.LFB3> <.LFE2>
+    11f4:	5f ff 07    	rcall     0x10b4 <_timer_init> <.LFB3> <.LFE2>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:306
     char buffer[50];
     Disp2String("Reference ,Encoder count, input signal\r\n");
-    11f4:	60 02 29    	mov.w     #0x9026, w0
-    11f6:	58 00 07    	rcall     0x12a8 <_Disp2String> <.LFB1> <.LFE0>
+    11f6:	60 02 29    	mov.w     #0x9026, w0
+    11f8:	58 00 07    	rcall     0x12aa <_Disp2String> <.LFB1> <.LFE0>
 
-000011f8 <.L20>:
+000011fa <.L20>:
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:309
 
     while (1) {
         if (control_flag) {
-    11f8:	04 c8 bf    	mov.b     0x804, WREG
-    11fa:	00 04 e0    	cp0.b     w0
-    11fc:	02 00 32    	bra       Z, 0x1202 <.L19>
+    11fa:	04 c8 bf    	mov.b     0x804, WREG
+    11fc:	00 04 e0    	cp0.b     w0
+    11fe:	02 00 32    	bra       Z, 0x1204 <.L19>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:310
             control_flag = 0;
-    11fe:	04 68 ef    	clr.b     0x804
+    1200:	04 68 ef    	clr.b     0x804
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:311
             run_controller();
-    1200:	c3 ff 07    	rcall     0x1188 <_run_controller> <.LFB6> <.LFE5>
+    1202:	c3 ff 07    	rcall     0x118a <_run_controller> <.LFB6> <.LFE5>
 
-00001202 <.L19>:
+00001204 <.L19>:
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:316
             // OC1R = PWM_DUTY_CYCLE(50);
             // IN3 = 0;
             // IN4 = 1;
         }
         Idle(); // low-power sleep until an interrupt occurs
-    1202:	01 40 fe    	pwrsav    #0x1
+    1204:	01 40 fe    	pwrsav    #0x1
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:317
     }
-    1204:	f9 ff 37    	bra       0x11f8 <.L20>
+    1206:	f9 ff 37    	bra       0x11fa <.L20>
 
-00001206 <_send_controller_data>:
+00001208 <_send_controller_data>:
 send_controller_data():
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:322
 
@@ -4046,72 +4047,72 @@ C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:322
 }
 
 void send_controller_data(int32_t reference, int32_t encoder_count, int32_t u) {
-    1206:	3e 00 fa    	lnk       #0x3e
-    1208:	10 1f 98    	mov.w     w0, [w14+50]
-    120a:	21 1f 98    	mov.w     w1, [w14+52]
-    120c:	32 1f 98    	mov.w     w2, [w14+54]
-    120e:	43 1f 98    	mov.w     w3, [w14+56]
-    1210:	54 1f 98    	mov.w     w4, [w14+58]
-    1212:	65 1f 98    	mov.w     w5, [w14+60]
+    1208:	3e 00 fa    	lnk       #0x3e
+    120a:	10 1f 98    	mov.w     w0, [w14+50]
+    120c:	21 1f 98    	mov.w     w1, [w14+52]
+    120e:	32 1f 98    	mov.w     w2, [w14+54]
+    1210:	43 1f 98    	mov.w     w3, [w14+56]
+    1212:	54 1f 98    	mov.w     w4, [w14+58]
+    1214:	65 1f 98    	mov.w     w5, [w14+60]
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:324
     char buffer[50];
     sprintf(buffer, "%ld,%ld,%ld\r\n", reference,encoder_count, u);
-    1214:	5e 18 90    	mov.w     [w14+58], w0
-    1216:	ee 18 90    	mov.w     [w14+60], w1
-    1218:	80 9f be    	mov.d     w0, [w15++]
-    121a:	3e 18 90    	mov.w     [w14+54], w0
-    121c:	ce 18 90    	mov.w     [w14+56], w1
-    121e:	80 9f be    	mov.d     w0, [w15++]
-    1220:	1e 18 90    	mov.w     [w14+50], w0
-    1222:	ae 18 90    	mov.w     [w14+52], w1
-    1224:	80 9f be    	mov.d     w0, [w15++]
-    1226:	f0 04 29    	mov.w     #0x904f, w0
-    1228:	80 1f 78    	mov.w     w0, [w15++]
-    122a:	0e 00 78    	mov.w     w14, w0
-    122c:	45 f8 07    	rcall     0x2b8 <__dsprintf_cdnopuxX> <___wrap_sprintf> <__sprintf_cdnopuxX>
-    122e:	ee 87 57    	sub.w     w15, #0xe, w15
+    1216:	5e 18 90    	mov.w     [w14+58], w0
+    1218:	ee 18 90    	mov.w     [w14+60], w1
+    121a:	80 9f be    	mov.d     w0, [w15++]
+    121c:	3e 18 90    	mov.w     [w14+54], w0
+    121e:	ce 18 90    	mov.w     [w14+56], w1
+    1220:	80 9f be    	mov.d     w0, [w15++]
+    1222:	1e 18 90    	mov.w     [w14+50], w0
+    1224:	ae 18 90    	mov.w     [w14+52], w1
+    1226:	80 9f be    	mov.d     w0, [w15++]
+    1228:	f0 04 29    	mov.w     #0x904f, w0
+    122a:	80 1f 78    	mov.w     w0, [w15++]
+    122c:	0e 00 78    	mov.w     w14, w0
+    122e:	44 f8 07    	rcall     0x2b8 <__dsprintf_cdnopuxX> <___wrap_sprintf> <__sprintf_cdnopuxX>
+    1230:	ee 87 57    	sub.w     w15, #0xe, w15
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:325
     Disp2String(buffer);
-    1230:	0e 00 78    	mov.w     w14, w0
-    1232:	3a 00 07    	rcall     0x12a8 <_Disp2String> <.LFB1> <.LFE0>
+    1232:	0e 00 78    	mov.w     w14, w0
+    1234:	3a 00 07    	rcall     0x12aa <_Disp2String> <.LFB1> <.LFE0>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:326
 }
-    1234:	00 80 fa    	ulnk      
-    1236:	00 00 06    	return    
+    1236:	00 80 fa    	ulnk      
+    1238:	00 00 06    	return    
 
-00001238 <_abs>:
+0000123a <_abs>:
 abs():
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:328
 
 uint32_t abs(int32_t value) {
-    1238:	04 00 fa    	lnk       #0x4
-    123a:	00 8f be    	mov.d     w0, [w14]
+    123a:	04 00 fa    	lnk       #0x4
+    123c:	00 8f be    	mov.d     w0, [w14]
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:329
     if (value < 0) {
-    123c:	1e 00 be    	mov.d     [w14], w0
-    123e:	e0 0f 50    	sub.w     w0, #0x0, [w15]
-    1240:	e0 8f 58    	subb.w    w1, #0x0, [w15]
-    1242:	04 00 3d    	bra       GE, 0x124c <.L23>
+    123e:	1e 00 be    	mov.d     [w14], w0
+    1240:	e0 0f 50    	sub.w     w0, #0x0, [w15]
+    1242:	e0 8f 58    	subb.w    w1, #0x0, [w15]
+    1244:	04 00 3d    	bra       GE, 0x124e <.L23>
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:330
         return -value;
-    1244:	1e 00 be    	mov.d     [w14], w0
-    1246:	60 00 10    	subr.w    w0, #0x0, w0
-    1248:	e0 80 18    	subbr.w   w1, #0x0, w1
-    124a:	01 00 37    	bra       0x124e <.L24>
+    1246:	1e 00 be    	mov.d     [w14], w0
+    1248:	60 00 10    	subr.w    w0, #0x0, w0
+    124a:	e0 80 18    	subbr.w   w1, #0x0, w1
+    124c:	01 00 37    	bra       0x1250 <.L24>
 
-0000124c <.L23>:
+0000124e <.L23>:
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:332
     } else {
         return value;
-    124c:	1e 00 be    	mov.d     [w14], w0
+    124e:	1e 00 be    	mov.d     [w14], w0
 
-0000124e <.L24>:
+00001250 <.L24>:
 C:/Projects/ENCM511/Lab4.X/2026_assignment4_main.c:334
     }
-}    124e:	00 80 fa    	ulnk      
-    1250:	00 00 06    	return    
+}    1250:	00 80 fa    	ulnk      
+    1252:	00 00 06    	return    
 
-00001252 <_InitUART2>:
+00001254 <_InitUART2>:
 InitUART2():
 C:/Projects/ENCM511/Lab4.X/uart.c:15
 volatile uint8_t received_char = 0;
@@ -4119,204 +4120,204 @@ volatile uint8_t RXFlag = 0;
 
 void InitUART2(void) 
 {
-    1252:	00 00 fa    	lnk       #0x0
+    1254:	00 00 fa    	lnk       #0x0
 C:/Projects/ENCM511/Lab4.X/uart.c:17
 
     RPINR19bits.U2RXR = 2; // RP2 (pin 6) is RX
-    1254:	b1 3d 80    	mov.w     0x7b6, w1
-    1256:	00 fc 2f    	mov.w     #0xffc0, w0
-    1258:	00 80 60    	and.w     w1, w0, w0
-    125a:	00 10 a0    	bset.w    w0, #0x1
-    125c:	b0 3d 88    	mov.w     w0, 0x7b6
+    1256:	b1 3d 80    	mov.w     0x7b6, w1
+    1258:	00 fc 2f    	mov.w     #0xffc0, w0
+    125a:	00 80 60    	and.w     w1, w0, w0
+    125c:	00 10 a0    	bset.w    w0, #0x1
+    125e:	b0 3d 88    	mov.w     w0, 0x7b6
 C:/Projects/ENCM511/Lab4.X/uart.c:18
     RPOR1bits.RP3R = 5;    // RP3 (pin 7) is TX
-    125e:	b1 3e 80    	mov.w     0x7d6, w1
-    1260:	f0 0f 28    	mov.w     #0x80ff, w0
-    1262:	80 80 60    	and.w     w1, w0, w1
-    1264:	00 50 20    	mov.w     #0x500, w0
-    1266:	01 00 70    	ior.w     w0, w1, w0
-    1268:	b0 3e 88    	mov.w     w0, 0x7d6
+    1260:	b1 3e 80    	mov.w     0x7d6, w1
+    1262:	f0 0f 28    	mov.w     #0x80ff, w0
+    1264:	80 80 60    	and.w     w1, w0, w1
+    1266:	00 50 20    	mov.w     #0x500, w0
+    1268:	01 00 70    	ior.w     w0, w1, w0
+    126a:	b0 3e 88    	mov.w     w0, 0x7d6
 C:/Projects/ENCM511/Lab4.X/uart.c:20
 
     U2MODE = 0b0000000010001000; // BRGH is enabled -> baud rate = Fcy/(4*(U2BRG+1))
-    126a:	80 08 20    	mov.w     #0x88, w0
-    126c:	70 1d 88    	mov.w     w0, 0x3ae
+    126c:	80 08 20    	mov.w     #0x88, w0
+    126e:	70 1d 88    	mov.w     w0, 0x3ae
 C:/Projects/ENCM511/Lab4.X/uart.c:22
 
     U2BRG = 103;            // Set baud rate to 9615.38 with Fcy = 4MHz, BRGH = 1
-    126e:	70 06 20    	mov.w     #0x67, w0
-    1270:	b0 1d 88    	mov.w     w0, 0x3b6
+    1270:	70 06 20    	mov.w     #0x67, w0
+    1272:	b0 1d 88    	mov.w     w0, 0x3b6
 C:/Projects/ENCM511/Lab4.X/uart.c:25
                             // 0.16% error from 9600 baud rate within 10% error range
     
 	U2STAbits.UTXISEL0 = 0;
-    1272:	b1 a3 a9    	bclr.b    0x3b1, #0x5
+    1274:	b1 a3 a9    	bclr.b    0x3b1, #0x5
 C:/Projects/ENCM511/Lab4.X/uart.c:26
     U2STAbits.UTXISEL1 = 0;
-    1274:	b1 e3 a9    	bclr.b    0x3b1, #0x7
+    1276:	b1 e3 a9    	bclr.b    0x3b1, #0x7
 C:/Projects/ENCM511/Lab4.X/uart.c:27
     U2STAbits.URXEN = 1;
-    1276:	b1 83 a8    	bset.b    0x3b1, #0x4
+    1278:	b1 83 a8    	bset.b    0x3b1, #0x4
 C:/Projects/ENCM511/Lab4.X/uart.c:28
     U2STAbits.UTXEN = 1;
-    1278:	b1 43 a8    	bset.b    0x3b1, #0x2
+    127a:	b1 43 a8    	bset.b    0x3b1, #0x2
 C:/Projects/ENCM511/Lab4.X/uart.c:29
     U2STAbits.URXISEL = 0b00;
-    127a:	81 1d 80    	mov.w     0x3b0, w1
-    127c:	f0 f3 2f    	mov.w     #0xff3f, w0
-    127e:	00 80 60    	and.w     w1, w0, w0
-    1280:	80 1d 88    	mov.w     w0, 0x3b0
+    127c:	81 1d 80    	mov.w     0x3b0, w1
+    127e:	f0 f3 2f    	mov.w     #0xff3f, w0
+    1280:	00 80 60    	and.w     w1, w0, w0
+    1282:	80 1d 88    	mov.w     w0, 0x3b0
 C:/Projects/ENCM511/Lab4.X/uart.c:31
 
 	IFS1bits.U2TXIF = 0;	
-    1282:	8b e0 a9    	bclr.b    0x8b, #0x7
+    1284:	8b e0 a9    	bclr.b    0x8b, #0x7
 C:/Projects/ENCM511/Lab4.X/uart.c:32
     IPC7bits.U2TXIP = 3; 
-    1284:	b1 05 80    	mov.w     0xb6, w1
-    1286:	f0 ff 28    	mov.w     #0x8fff, w0
-    1288:	80 80 60    	and.w     w1, w0, w1
-    128a:	00 00 23    	mov.w     #0x3000, w0
-    128c:	01 00 70    	ior.w     w0, w1, w0
-    128e:	b0 05 88    	mov.w     w0, 0xb6
+    1286:	b1 05 80    	mov.w     0xb6, w1
+    1288:	f0 ff 28    	mov.w     #0x8fff, w0
+    128a:	80 80 60    	and.w     w1, w0, w1
+    128c:	00 00 23    	mov.w     #0x3000, w0
+    128e:	01 00 70    	ior.w     w0, w1, w0
+    1290:	b0 05 88    	mov.w     w0, 0xb6
 C:/Projects/ENCM511/Lab4.X/uart.c:34
     
 	IEC1bits.U2TXIE = 1; 
-    1290:	9b e0 a8    	bset.b    0x9b, #0x7
+    1292:	9b e0 a8    	bset.b    0x9b, #0x7
 C:/Projects/ENCM511/Lab4.X/uart.c:35
 	IFS1bits.U2RXIF = 0; 
-    1292:	8b c0 a9    	bclr.b    0x8b, #0x6
+    1294:	8b c0 a9    	bclr.b    0x8b, #0x6
 C:/Projects/ENCM511/Lab4.X/uart.c:36
 	IPC7bits.U2RXIP = 4; 
-    1294:	b1 05 80    	mov.w     0xb6, w1
-    1296:	f0 8f 2f    	mov.w     #0xf8ff, w0
-    1298:	00 80 60    	and.w     w1, w0, w0
-    129a:	00 a0 a0    	bset.w    w0, #0xa
-    129c:	b0 05 88    	mov.w     w0, 0xb6
+    1296:	b1 05 80    	mov.w     0xb6, w1
+    1298:	f0 8f 2f    	mov.w     #0xf8ff, w0
+    129a:	00 80 60    	and.w     w1, w0, w0
+    129c:	00 a0 a0    	bset.w    w0, #0xa
+    129e:	b0 05 88    	mov.w     w0, 0xb6
 C:/Projects/ENCM511/Lab4.X/uart.c:37
     IEC1bits.U2RXIE = 1;
-    129e:	9b c0 a8    	bset.b    0x9b, #0x6
+    12a0:	9b c0 a8    	bset.b    0x9b, #0x6
 C:/Projects/ENCM511/Lab4.X/uart.c:39
 
 	U2MODEbits.UARTEN = 1;	
-    12a0:	af e3 a8    	bset.b    0x3af, #0x7
+    12a2:	af e3 a8    	bset.b    0x3af, #0x7
 C:/Projects/ENCM511/Lab4.X/uart.c:41
 
 	U2STAbits.UTXEN = 1;
-    12a2:	b1 43 a8    	bset.b    0x3b1, #0x2
+    12a4:	b1 43 a8    	bset.b    0x3b1, #0x2
 C:/Projects/ENCM511/Lab4.X/uart.c:43
 	return;
 }
-    12a4:	00 80 fa    	ulnk      
-    12a6:	00 00 06    	return    
+    12a6:	00 80 fa    	ulnk      
+    12a8:	00 00 06    	return    
 
-000012a8 <_Disp2String>:
+000012aa <_Disp2String>:
 Disp2String():
 C:/Projects/ENCM511/Lab4.X/uart.c:46
 
 void Disp2String(char *str) //Displays String of characters
 {
-    12a8:	04 00 fa    	lnk       #0x4
-    12aa:	10 07 98    	mov.w     w0, [w14+2]
+    12aa:	04 00 fa    	lnk       #0x4
+    12ac:	10 07 98    	mov.w     w0, [w14+2]
 C:/Projects/ENCM511/Lab4.X/uart.c:48
     unsigned int i;
     for (i=0; i<= strlen(str); i++)
-    12ac:	00 00 eb    	clr.w     w0
-    12ae:	00 0f 78    	mov.w     w0, [w14]
-    12b0:	06 00 37    	bra       0x12be <.L3>
+    12ae:	00 00 eb    	clr.w     w0
+    12b0:	00 0f 78    	mov.w     w0, [w14]
+    12b2:	06 00 37    	bra       0x12c0 <.L3>
 
-000012b2 <.L4>:
+000012b4 <.L4>:
 C:/Projects/ENCM511/Lab4.X/uart.c:50
     {
         XmitUART2(str[i],1);
-    12b2:	1e 00 90    	mov.w     [w14+2], w0
-    12b4:	1e 00 40    	add.w     w0, [w14], w0
-    12b6:	10 40 78    	mov.b     [w0], w0
-    12b8:	11 00 20    	mov.w     #0x1, w1
-    12ba:	07 00 07    	rcall     0x12ca <_XmitUART2> <.LFB2> <.LFE1>
+    12b4:	1e 00 90    	mov.w     [w14+2], w0
+    12b6:	1e 00 40    	add.w     w0, [w14], w0
+    12b8:	10 40 78    	mov.b     [w0], w0
+    12ba:	11 00 20    	mov.w     #0x1, w1
+    12bc:	07 00 07    	rcall     0x12cc <_XmitUART2> <.LFB2> <.LFE1>
 C:/Projects/ENCM511/Lab4.X/uart.c:48
-    12bc:	1e 0f e8    	inc.w     [w14], [w14]
+    12be:	1e 0f e8    	inc.w     [w14], [w14]
 
-000012be <.L3>:
-    12be:	1e 00 90    	mov.w     [w14+2], w0
-    12c0:	08 f8 07    	rcall     0x2d2 <_strlen>
-    12c2:	9e 0f 50    	sub.w     w0, [w14], [w15]
-    12c4:	f6 ff 31    	bra       C, 0x12b2 <.L4>
+000012c0 <.L3>:
+    12c0:	1e 00 90    	mov.w     [w14+2], w0
+    12c2:	07 f8 07    	rcall     0x2d2 <_strlen>
+    12c4:	9e 0f 50    	sub.w     w0, [w14], [w15]
+    12c6:	f6 ff 31    	bra       C, 0x12b4 <.L4>
 C:/Projects/ENCM511/Lab4.X/uart.c:54
     }
 
     return;
 }
-    12c6:	00 80 fa    	ulnk      
-    12c8:	00 00 06    	return    
+    12c8:	00 80 fa    	ulnk      
+    12ca:	00 00 06    	return    
 
-000012ca <_XmitUART2>:
+000012cc <_XmitUART2>:
 XmitUART2():
 C:/Projects/ENCM511/Lab4.X/uart.c:57
 
 void XmitUART2(char CharNum, unsigned int repeatNo)
 {	
-    12ca:	04 00 fa    	lnk       #0x4
-    12cc:	00 4f 78    	mov.b     w0, [w14]
-    12ce:	11 07 98    	mov.w     w1, [w14+2]
+    12cc:	04 00 fa    	lnk       #0x4
+    12ce:	00 4f 78    	mov.b     w0, [w14]
+    12d0:	11 07 98    	mov.w     w1, [w14+2]
 C:/Projects/ENCM511/Lab4.X/uart.c:58
 	U2STAbits.UTXEN = 1;
-    12d0:	b1 43 a8    	bset.b    0x3b1, #0x2
+    12d2:	b1 43 a8    	bset.b    0x3b1, #0x2
 C:/Projects/ENCM511/Lab4.X/uart.c:59
 	while(repeatNo!=0) 
-    12d2:	0b 00 37    	bra       0x12ea <.L6>
+    12d4:	0b 00 37    	bra       0x12ec <.L6>
 
-000012d4 <.L10>:
+000012d6 <.L10>:
 C:/Projects/ENCM511/Lab4.X/uart.c:61
 	{
 		while(U2STAbits.UTXBF==1)   // We loop here to wait to have some space in the transmit buffer
-    12d4:	00 00 00    	nop       
+    12d6:	00 00 00    	nop       
 
-000012d6 <.L7>:
-    12d6:	81 1d 80    	mov.w     0x3b0, w1
-    12d8:	00 20 20    	mov.w     #0x200, w0
-    12da:	00 80 60    	and.w     w1, w0, w0
-    12dc:	00 00 e0    	cp0.w     w0
-    12de:	fb ff 3a    	bra       NZ, 0x12d6 <.L7>
+000012d8 <.L7>:
+    12d8:	81 1d 80    	mov.w     0x3b0, w1
+    12da:	00 20 20    	mov.w     #0x200, w0
+    12dc:	00 80 60    	and.w     w1, w0, w0
+    12de:	00 00 e0    	cp0.w     w0
+    12e0:	fb ff 3a    	bra       NZ, 0x12d8 <.L7>
 C:/Projects/ENCM511/Lab4.X/uart.c:64
 		{
 		}	
 		U2TXREG=CharNum;            // We put 1 byte of data to be transmitted through UART
-    12e0:	1e 00 fb    	se        [w14], w0
-    12e2:	90 1d 88    	mov.w     w0, 0x3b2
+    12e2:	1e 00 fb    	se        [w14], w0
+    12e4:	90 1d 88    	mov.w     w0, 0x3b2
 C:/Projects/ENCM511/Lab4.X/uart.c:65
 		repeatNo--;
-    12e4:	1e 00 90    	mov.w     [w14+2], w0
-    12e6:	00 00 e9    	dec.w     w0, w0
-    12e8:	10 07 98    	mov.w     w0, [w14+2]
+    12e6:	1e 00 90    	mov.w     [w14+2], w0
+    12e8:	00 00 e9    	dec.w     w0, w0
+    12ea:	10 07 98    	mov.w     w0, [w14+2]
 
-000012ea <.L6>:
+000012ec <.L6>:
 C:/Projects/ENCM511/Lab4.X/uart.c:59
-    12ea:	1e 00 90    	mov.w     [w14+2], w0
-    12ec:	00 00 e0    	cp0.w     w0
-    12ee:	f2 ff 3a    	bra       NZ, 0x12d4 <.L10>
+    12ec:	1e 00 90    	mov.w     [w14+2], w0
+    12ee:	00 00 e0    	cp0.w     w0
+    12f0:	f2 ff 3a    	bra       NZ, 0x12d6 <.L10>
 C:/Projects/ENCM511/Lab4.X/uart.c:67
 	}
 	while(U2STAbits.TRMT==0)        // We check Transmit shift register empty bit to wait until the last byte is transmitted
-    12f0:	00 00 00    	nop       
+    12f2:	00 00 00    	nop       
 
-000012f2 <.L9>:
-    12f2:	81 1d 80    	mov.w     0x3b0, w1
-    12f4:	00 10 20    	mov.w     #0x100, w0
-    12f6:	00 80 60    	and.w     w1, w0, w0
-    12f8:	00 00 e0    	cp0.w     w0
-    12fa:	fb ff 32    	bra       Z, 0x12f2 <.L9>
+000012f4 <.L9>:
+    12f4:	81 1d 80    	mov.w     0x3b0, w1
+    12f6:	00 10 20    	mov.w     #0x100, w0
+    12f8:	00 80 60    	and.w     w1, w0, w0
+    12fa:	00 00 e0    	cp0.w     w0
+    12fc:	fb ff 32    	bra       Z, 0x12f4 <.L9>
 C:/Projects/ENCM511/Lab4.X/uart.c:71
 	{
 	}
 
     U2STAbits.UTXEN = 0;
-    12fc:	b1 43 a9    	bclr.b    0x3b1, #0x2
+    12fe:	b1 43 a9    	bclr.b    0x3b1, #0x2
 C:/Projects/ENCM511/Lab4.X/uart.c:72
 }
-    12fe:	00 80 fa    	ulnk      
-    1300:	00 00 06    	return    
+    1300:	00 80 fa    	ulnk      
+    1302:	00 00 06    	return    
 
-00001302 <_RecvUart>:
+00001304 <_RecvUart>:
 RecvUart():
 C:/Projects/ENCM511/Lab4.X/uart.c:85
 
@@ -4332,92 +4333,92 @@ C:/Projects/ENCM511/Lab4.X/uart.c:85
  ************************************************************************/
 void RecvUart(char* input, uint8_t buf_size)
 {	
-    1302:	08 00 fa    	lnk       #0x8
-    1304:	20 07 98    	mov.w     w0, [w14+4]
-    1306:	61 47 98    	mov.b     w1, [w14+6]
+    1304:	08 00 fa    	lnk       #0x8
+    1306:	20 07 98    	mov.w     w0, [w14+4]
+    1308:	61 47 98    	mov.b     w1, [w14+6]
 C:/Projects/ENCM511/Lab4.X/uart.c:86
     uint16_t i = 0;
-    1308:	00 00 eb    	clr.w     w0
-    130a:	00 0f 78    	mov.w     w0, [w14]
+    130a:	00 00 eb    	clr.w     w0
+    130c:	00 0f 78    	mov.w     w0, [w14]
 C:/Projects/ENCM511/Lab4.X/uart.c:89
     char last_char;
     // wait for enter key
     while (last_char != 0x0D) {
-    130c:	21 00 37    	bra       0x1350 <.L12>
+    130e:	21 00 37    	bra       0x1352 <.L12>
 
-0000130e <.L16>:
+00001310 <.L16>:
 C:/Projects/ENCM511/Lab4.X/uart.c:90
         if (RXFlag == 1) {
-    130e:	07 c8 bf    	mov.b     0x807, WREG
-    1310:	e1 4f 50    	sub.b     w0, #0x1, [w15]
-    1312:	1e 00 3a    	bra       NZ, 0x1350 <.L12>
+    1310:	07 c8 bf    	mov.b     0x807, WREG
+    1312:	e1 4f 50    	sub.b     w0, #0x1, [w15]
+    1314:	1e 00 3a    	bra       NZ, 0x1352 <.L12>
 C:/Projects/ENCM511/Lab4.X/uart.c:92
             // only store alphanumeric characters
             if (received_char >= 32 && received_char <= 126) {
-    1314:	06 c8 bf    	mov.b     0x806, WREG
-    1316:	ff 4f 50    	sub.b     w0, #0x1f, [w15]
-    1318:	18 00 36    	bra       LEU, 0x134a <.L13>
-    131a:	61 80 20    	mov.w     #0x806, w1
-    131c:	91 40 78    	mov.b     [w1], w1
-    131e:	e0 c7 b3    	mov.b     #0x7e, w0
-    1320:	80 cf 50    	sub.b     w1, w0, [w15]
-    1322:	13 00 3e    	bra       GTU, 0x134a <.L13>
+    1316:	06 c8 bf    	mov.b     0x806, WREG
+    1318:	ff 4f 50    	sub.b     w0, #0x1f, [w15]
+    131a:	18 00 36    	bra       LEU, 0x134c <.L13>
+    131c:	61 80 20    	mov.w     #0x806, w1
+    131e:	91 40 78    	mov.b     [w1], w1
+    1320:	e0 c7 b3    	mov.b     #0x7e, w0
+    1322:	80 cf 50    	sub.b     w1, w0, [w15]
+    1324:	13 00 3e    	bra       GTU, 0x134c <.L13>
 C:/Projects/ENCM511/Lab4.X/uart.c:93
                 if (i > buf_size-2) {
-    1324:	6e 40 90    	mov.b     [w14+6], w0
-    1326:	00 80 fb    	ze        w0, w0
-    1328:	00 80 e9    	dec2.w    w0, w0
-    132a:	9e 0f 50    	sub.w     w0, [w14], [w15]
-    132c:	04 00 31    	bra       C, 0x1336 <.L14>
+    1326:	6e 40 90    	mov.b     [w14+6], w0
+    1328:	00 80 fb    	ze        w0, w0
+    132a:	00 80 e9    	dec2.w    w0, w0
+    132c:	9e 0f 50    	sub.w     w0, [w14], [w15]
+    132e:	04 00 31    	bra       C, 0x1338 <.L14>
 C:/Projects/ENCM511/Lab4.X/uart.c:94
                     Disp2String("\ntoo long\n\r");
-    132e:	e0 05 29    	mov.w     #0x905e, w0
-    1330:	bb ff 07    	rcall     0x12a8 <_Disp2String> <.LFB1> <.LFE0>
+    1330:	e0 05 29    	mov.w     #0x905e, w0
+    1332:	bb ff 07    	rcall     0x12aa <_Disp2String> <.LFB1> <.LFE0>
 C:/Projects/ENCM511/Lab4.X/uart.c:95
                     RXFlag = 0;
-    1332:	07 68 ef    	clr.b     0x807
+    1334:	07 68 ef    	clr.b     0x807
 C:/Projects/ENCM511/Lab4.X/uart.c:96
                     return;
-    1334:	10 00 37    	bra       0x1356 <.L11>
+    1336:	10 00 37    	bra       0x1358 <.L11>
 
-00001336 <.L14>:
+00001338 <.L14>:
 C:/Projects/ENCM511/Lab4.X/uart.c:98
                 }
                 input[i] = received_char;
-    1336:	2e 00 90    	mov.w     [w14+4], w0
-    1338:	1e 00 40    	add.w     w0, [w14], w0
-    133a:	61 80 20    	mov.w     #0x806, w1
-    133c:	91 40 78    	mov.b     [w1], w1
-    133e:	01 48 78    	mov.b     w1, [w0]
+    1338:	2e 00 90    	mov.w     [w14+4], w0
+    133a:	1e 00 40    	add.w     w0, [w14], w0
+    133c:	61 80 20    	mov.w     #0x806, w1
+    133e:	91 40 78    	mov.b     [w1], w1
+    1340:	01 48 78    	mov.b     w1, [w0]
 C:/Projects/ENCM511/Lab4.X/uart.c:99
                 i++;
-    1340:	1e 0f e8    	inc.w     [w14], [w14]
+    1342:	1e 0f e8    	inc.w     [w14], [w14]
 C:/Projects/ENCM511/Lab4.X/uart.c:100
                 XmitUART2(received_char,1); // loop back display
-    1342:	06 c8 bf    	mov.b     0x806, WREG
-    1344:	11 00 20    	mov.w     #0x1, w1
-    1346:	c1 ff 07    	rcall     0x12ca <_XmitUART2> <.LFB2> <.LFE1>
+    1344:	06 c8 bf    	mov.b     0x806, WREG
+    1346:	11 00 20    	mov.w     #0x1, w1
+    1348:	c1 ff 07    	rcall     0x12cc <_XmitUART2> <.LFB2> <.LFE1>
 C:/Projects/ENCM511/Lab4.X/uart.c:101
                 U2STAbits.OERR = 0;
-    1348:	b0 23 a9    	bclr.b    0x3b0, #0x1
+    134a:	b0 23 a9    	bclr.b    0x3b0, #0x1
 
-0000134a <.L13>:
+0000134c <.L13>:
 C:/Projects/ENCM511/Lab4.X/uart.c:103
             }
             last_char = received_char;
-    134a:	06 c8 bf    	mov.b     0x806, WREG
-    134c:	20 47 98    	mov.b     w0, [w14+2]
+    134c:	06 c8 bf    	mov.b     0x806, WREG
+    134e:	20 47 98    	mov.b     w0, [w14+2]
 C:/Projects/ENCM511/Lab4.X/uart.c:104
             RXFlag = 0;
-    134e:	07 68 ef    	clr.b     0x807
+    1350:	07 68 ef    	clr.b     0x807
 
-00001350 <.L12>:
+00001352 <.L12>:
 C:/Projects/ENCM511/Lab4.X/uart.c:89
-    1350:	2e 40 90    	mov.b     [w14+2], w0
-    1352:	ed 4f 50    	sub.b     w0, #0xd, [w15]
-    1354:	dc ff 3a    	bra       NZ, 0x130e <.L16>
+    1352:	2e 40 90    	mov.b     [w14+2], w0
+    1354:	ed 4f 50    	sub.b     w0, #0xd, [w15]
+    1356:	dc ff 3a    	bra       NZ, 0x1310 <.L16>
 
-00001356 <.L11>:
+00001358 <.L11>:
 C:/Projects/ENCM511/Lab4.X/uart.c:112
         }
         // wait for next character
@@ -4427,10 +4428,10 @@ C:/Projects/ENCM511/Lab4.X/uart.c:112
         // }
     }
 }
-    1356:	00 80 fa    	ulnk      
-    1358:	00 00 06    	return    
+    1358:	00 80 fa    	ulnk      
+    135a:	00 00 06    	return    
 
-0000135a <_RecvUartChar>:
+0000135c <_RecvUartChar>:
 RecvUartChar():
 C:/Projects/ENCM511/Lab4.X/uart.c:126
 
@@ -4447,85 +4448,85 @@ C:/Projects/ENCM511/Lab4.X/uart.c:126
  ************************************************************************/
 char RecvUartChar()
 {	
-    135a:	02 00 fa    	lnk       #0x2
+    135c:	02 00 fa    	lnk       #0x2
 C:/Projects/ENCM511/Lab4.X/uart.c:128
     char last_char;
     XmitUART2(' ',1);
-    135c:	11 00 20    	mov.w     #0x1, w1
-    135e:	00 c2 b3    	mov.b     #0x20, w0
-    1360:	b4 ff 07    	rcall     0x12ca <_XmitUART2> <.LFB2> <.LFE1>
+    135e:	11 00 20    	mov.w     #0x1, w1
+    1360:	00 c2 b3    	mov.b     #0x20, w0
+    1362:	b4 ff 07    	rcall     0x12cc <_XmitUART2> <.LFB2> <.LFE1>
 C:/Projects/ENCM511/Lab4.X/uart.c:130
     // wait for enter key
     while (last_char != 0x0D) {
-    1362:	1b 00 37    	bra       0x139a <.L18>
+    1364:	1b 00 37    	bra       0x139c <.L18>
 
-00001364 <.L21>:
+00001366 <.L21>:
 C:/Projects/ENCM511/Lab4.X/uart.c:131
         if (RXFlag == 1) {
-    1364:	07 c8 bf    	mov.b     0x807, WREG
-    1366:	e1 4f 50    	sub.b     w0, #0x1, [w15]
-    1368:	18 00 3a    	bra       NZ, 0x139a <.L18>
+    1366:	07 c8 bf    	mov.b     0x807, WREG
+    1368:	e1 4f 50    	sub.b     w0, #0x1, [w15]
+    136a:	18 00 3a    	bra       NZ, 0x139c <.L18>
 C:/Projects/ENCM511/Lab4.X/uart.c:134
             
             // return the last character received if you see ENTER
             if (received_char == 0x0D) {
-    136a:	06 c8 bf    	mov.b     0x806, WREG
-    136c:	ed 4f 50    	sub.b     w0, #0xd, [w15]
-    136e:	03 00 3a    	bra       NZ, 0x1376 <.L19>
+    136c:	06 c8 bf    	mov.b     0x806, WREG
+    136e:	ed 4f 50    	sub.b     w0, #0xd, [w15]
+    1370:	03 00 3a    	bra       NZ, 0x1378 <.L19>
 C:/Projects/ENCM511/Lab4.X/uart.c:135
                 RXFlag = 0;
-    1370:	07 68 ef    	clr.b     0x807
+    1372:	07 68 ef    	clr.b     0x807
 C:/Projects/ENCM511/Lab4.X/uart.c:136
                 return last_char;
-    1372:	1e 40 78    	mov.b     [w14], w0
-    1374:	15 00 37    	bra       0x13a0 <.L17>
+    1374:	1e 40 78    	mov.b     [w14], w0
+    1376:	15 00 37    	bra       0x13a2 <.L17>
 
-00001376 <.L19>:
+00001378 <.L19>:
 C:/Projects/ENCM511/Lab4.X/uart.c:140
             }
             
             // only store alphanumeric characters
             if (received_char >= 32 && received_char <= 126) {
-    1376:	06 c8 bf    	mov.b     0x806, WREG
-    1378:	ff 4f 50    	sub.b     w0, #0x1f, [w15]
-    137a:	0d 00 36    	bra       LEU, 0x1396 <.L20>
-    137c:	61 80 20    	mov.w     #0x806, w1
-    137e:	91 40 78    	mov.b     [w1], w1
-    1380:	e0 c7 b3    	mov.b     #0x7e, w0
-    1382:	80 cf 50    	sub.b     w1, w0, [w15]
-    1384:	08 00 3e    	bra       GTU, 0x1396 <.L20>
+    1378:	06 c8 bf    	mov.b     0x806, WREG
+    137a:	ff 4f 50    	sub.b     w0, #0x1f, [w15]
+    137c:	0d 00 36    	bra       LEU, 0x1398 <.L20>
+    137e:	61 80 20    	mov.w     #0x806, w1
+    1380:	91 40 78    	mov.b     [w1], w1
+    1382:	e0 c7 b3    	mov.b     #0x7e, w0
+    1384:	80 cf 50    	sub.b     w1, w0, [w15]
+    1386:	08 00 3e    	bra       GTU, 0x1398 <.L20>
 C:/Projects/ENCM511/Lab4.X/uart.c:141
                 XmitUART2(0x08,1); // send backspace
-    1386:	11 00 20    	mov.w     #0x1, w1
-    1388:	80 c0 b3    	mov.b     #0x8, w0
-    138a:	9f ff 07    	rcall     0x12ca <_XmitUART2> <.LFB2> <.LFE1>
+    1388:	11 00 20    	mov.w     #0x1, w1
+    138a:	80 c0 b3    	mov.b     #0x8, w0
+    138c:	9f ff 07    	rcall     0x12cc <_XmitUART2> <.LFB2> <.LFE1>
 C:/Projects/ENCM511/Lab4.X/uart.c:142
                 last_char = received_char;
-    138c:	06 c8 bf    	mov.b     0x806, WREG
-    138e:	00 4f 78    	mov.b     w0, [w14]
+    138e:	06 c8 bf    	mov.b     0x806, WREG
+    1390:	00 4f 78    	mov.b     w0, [w14]
 C:/Projects/ENCM511/Lab4.X/uart.c:143
                 XmitUART2(received_char,1); // loop back display
-    1390:	06 c8 bf    	mov.b     0x806, WREG
-    1392:	11 00 20    	mov.w     #0x1, w1
-    1394:	9a ff 07    	rcall     0x12ca <_XmitUART2> <.LFB2> <.LFE1>
+    1392:	06 c8 bf    	mov.b     0x806, WREG
+    1394:	11 00 20    	mov.w     #0x1, w1
+    1396:	9a ff 07    	rcall     0x12cc <_XmitUART2> <.LFB2> <.LFE1>
 
-00001396 <.L20>:
+00001398 <.L20>:
 C:/Projects/ENCM511/Lab4.X/uart.c:146
             }
            
             U2STAbits.OERR = 0;
-    1396:	b0 23 a9    	bclr.b    0x3b0, #0x1
+    1398:	b0 23 a9    	bclr.b    0x3b0, #0x1
 C:/Projects/ENCM511/Lab4.X/uart.c:147
             RXFlag = 0;
-    1398:	07 68 ef    	clr.b     0x807
+    139a:	07 68 ef    	clr.b     0x807
 
-0000139a <.L18>:
+0000139c <.L18>:
 C:/Projects/ENCM511/Lab4.X/uart.c:130
-    139a:	1e 40 78    	mov.b     [w14], w0
-    139c:	ed 4f 50    	sub.b     w0, #0xd, [w15]
-    139e:	e2 ff 3a    	bra       NZ, 0x1364 <.L21>
+    139c:	1e 40 78    	mov.b     [w14], w0
+    139e:	ed 4f 50    	sub.b     w0, #0xd, [w15]
+    13a0:	e2 ff 3a    	bra       NZ, 0x1366 <.L21>
 
-000013a0 <.L17>:
+000013a2 <.L17>:
 C:/Projects/ENCM511/Lab4.X/uart.c:154
         }
         
@@ -4534,32 +4535,32 @@ C:/Projects/ENCM511/Lab4.X/uart.c:154
         // }
     }
 }
-    13a0:	00 80 fa    	ulnk      
-    13a2:	00 00 06    	return    
+    13a2:	00 80 fa    	ulnk      
+    13a4:	00 00 06    	return    
 Disassembly of section .dinit:
 
-000013a4 <.dinit>:
+000013a6 <.dinit>:
 .dinit():
-    13a4:	00 08 00    	nop       
-    13a6:	06 00 00    	nop       
-    13a8:	80 00 00    	nop       
-    13aa:	06 08 00    	nop       
-    13ac:	02 00 00    	nop       
-    13ae:	80 00 00    	nop       
-    13b0:	08 08 00    	nop       
-    13b2:	1e 00 00    	nop       
-    13b4:	82 00 00    	nop       
-    13b6:	28 6e 69    	xor.b     w2, [w8--], [++w12]
-    13b8:	6c 29 00    	nop       
-    13ba:	25 00 68    	xor.w     w0, [w5--], w0
-    13bc:	07 6c 09    	.pword 0x096c07
-    13be:	4c 83 6a    	xor.w     w5, [--w12], w6
-    13c0:	90 74 a0    	.pword 0xa07490
-    13c2:	7a c0 00    	nop       
-    13c4:	80 68 88    	mov.w     w0, 0xd10
-    13c6:	00 84 6c    	xor.w     w9, w0, w8
-    13c8:	82 00 81    	mov.w     0x2010, w2
-    13ca:	26 08 00    	nop       
-    13cc:	02 00 00    	nop       
-    13ce:	80 00 00    	nop       
-    13d0:	00 00 00    	nop       
+    13a6:	00 08 00    	nop       
+    13a8:	06 00 00    	nop       
+    13aa:	80 00 00    	nop       
+    13ac:	06 08 00    	nop       
+    13ae:	02 00 00    	nop       
+    13b0:	80 00 00    	nop       
+    13b2:	08 08 00    	nop       
+    13b4:	1e 00 00    	nop       
+    13b6:	82 00 00    	nop       
+    13b8:	28 6e 69    	xor.b     w2, [w8--], [++w12]
+    13ba:	6c 29 00    	nop       
+    13bc:	25 00 68    	xor.w     w0, [w5--], w0
+    13be:	07 6c 09    	.pword 0x096c07
+    13c0:	4c 83 6a    	xor.w     w5, [--w12], w6
+    13c2:	90 74 a0    	.pword 0xa07490
+    13c4:	7a c0 00    	nop       
+    13c6:	80 68 88    	mov.w     w0, 0xd10
+    13c8:	00 84 6c    	xor.w     w9, w0, w8
+    13ca:	82 00 81    	mov.w     0x2010, w2
+    13cc:	26 08 00    	nop       
+    13ce:	02 00 00    	nop       
+    13d0:	80 00 00    	nop       
+    13d2:	00 00 00    	nop       

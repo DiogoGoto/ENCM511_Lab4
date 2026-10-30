@@ -248,9 +248,9 @@ void run_controller(void) {
  * No function calls, UART, or delays inside this ISR. */
 void __attribute__((interrupt, no_auto_psv)) _IOCInterrupt(void) {
     if (IOCFBbits.IOCFB7) {
-        IOCFBbits.IOCFB7 = 0; // Clear the interrupt flag
-        IOCPBbits.IOCPB7 = 0; // Clear the interrupt flag
-        IFS1bits.IOCIF = 0; // Clear the interrupt flag
+        IOCFBbits.IOCFB7 = 0;       // Clear RB7 flag
+        IOCSTATbits.IOCPBF = 0;     // Clear positive-edge flag
+        IFS1bits.IOCIF = 0;  
 
         if (CHB) {
             encoder_count++;

@@ -33,12 +33,15 @@
 #pragma config FNOSC=FRC, POSCMD=NONE, OSCIOFCN=ON, FCKSM=CSDCMD
 #pragma config IOL1WAY=OFF, FWDTEN=OFF, JTAGEN=OFF
 
+
 #define FCY            4000000UL
 #define COUNTS_PER_REV 2048
-#define KP_Q8          2500        // actual gain = KP_Q8 / 256 
+#define KP_Q8          640       // actual gain = KP_Q8 / 256 
 #define PWM_MAX        399
 #define PWM_MIN        10
 #define REFERENCE      256
+
+#define CONTROL_PERIOD(x) (FCY / 256 / x) // 256 is the prescaler for Timer2, x is the desired control frequency in Hz
 
 #define PWM_DUTY      50        // initial duty cycle in %
 #define PWM_FREQ      10000UL    // PWM frequency in Hz
@@ -132,8 +135,8 @@ void timer_init(void) {
     T2CON = 0;                  // DO NOT CHANGE 
     TMR2  = 0;                  // DO NOT CHANGE 
 
-    PR2               = 625;    // period register - counts = FCY / (prescaler * f_desired) = 4 MHz / (64 * 100 Hz) = 625
-    T2CONbits.TCKPS   = 2;      // prescaler select - 1:64
+    PR2               = 153;    // period register - counts = FCY / (prescaler * f_desired) = 4 MHz / (256 * 100 Hz) = 125.25
+    T2CONbits.TCKPS   = 3;      // prescaler select - 1:256
     T2CONbits.TCS     = 0;      // clock source     - FOSC/2
     T2CONbits.T32     = 0;      // timer width - 16 bits
 
@@ -163,18 +166,23 @@ void timer_init(void) {
  * Datasheet ref: Sections 11.5 (PPS) and 15.3 (Output Compare). */
 void pwm_init(void) {
     // your code here 
-    RPOR6bits.RP13R = 13; // RP13 - RB13 set as PWM output (OC1)
-    RPOR3bits.RP6R = 13; // RP6 - RB6 set as PWM output (OC1)
-    OC1RS = PWM_PERIOD(PWM_FREQ); // Set the period for 1 kHz PWM frequency
-    OC1R = PWM_DUTY_CYCLE(PWM_DUTY);//PWM_PERIOD(PWM_FREQ);
+    TRISBbits.TRISB13 = 0;           // Set RB13 as output
+     ANSELBbits.ANSB13 = 0;
+    RPOR6bits.RP13R = 13;            // RP13 - RB13 set as PWM output (OC1)
+    RPOR3bits.RP6R = 13;             // RP6 - RB6 set as PWM output (OC1)
+
+    OC1CON1 = 0;
+    OC1CON2 = 0;
+
+    OC1RS = PWM_PERIOD(PWM_FREQ);    // Set the period for 1 kHz PWM frequency
+    OC1R = PWM_DUTY_CYCLE(PWM_DUTY); //PWM_PERIOD(PWM_FREQ);
+    
     
     OC1CON2bits.SYNCSEL = 0x1F;
     OC1CON2bits.OCTRIG = 0;
     OC1CON1bits.OCTSEL = 1; // Time 3 Clock Source
 
     OC1CON1bits.OCM = 0b110; // Init pin low and compare drive it high
-    
-    
 }
 
 
@@ -203,10 +211,10 @@ void set_motor_pwm(int32_t control) {
         IN4 = 0;
     }
     magnitude = abs(control);
-    if (magnitude > 0) {
+    if (magnitude > PWM_MAX) {
         magnitude = PWM_MAX;
     }
-    if (magnitude < 0) {
+    if (magnitude < PWM_MIN) {
         magnitude = PWM_MIN;
     }
     OC1R = magnitude;
